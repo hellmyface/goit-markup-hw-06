@@ -1,7 +1,20 @@
+:root {
+    --main-color: #4d5ae5;
+    --secondary-color: #404bbf;
+    --background-color: #ffffff;
+    --text-color: #2e2f42;
+    --text-light: #434455;
+    --text-dark: #8e8f99;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     color: #434455;
     background-color: #FFFFFF;
+    background-color: var(--background-color);
+    color: var(--text-light);
+    margin: 0;
+    padding: 0;
 }
 
 h1,
@@ -13,6 +26,8 @@ h6,
 p {
     margin-top: 0;
     margin-bottom: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 ul,
@@ -44,6 +59,55 @@ img {
     padding-bottom: 120px;
     padding-top: 120px;
 }
+
+@media (max-width: 768px) {
+    .nav__list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav__item {
+        margin: 10px 0;
+    }
+
+    .hero__title {
+        font-size: 40px;
+        margin: 0 0 10px;
+    }
+
+    .portfolio__item {
+        width: 100%;
+    }
+
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .nav__list {
+        flex-direction: row;
+    }
+
+    .nav__item {
+        margin-left: 15px;
+    }
+
+    .hero__title {
+        font-size: 48px;
+    }
+
+    .portfolio__item {
+        width: 48%;
+    }
+
+    .container {
+        width: 90%;
+        padding: 0 20px;
+    }
+}
+
 .header__container.container {
     display: flex;
 }
@@ -75,6 +139,7 @@ img {
 
 .nav__logo span {
     color: #2e2f42;
+    font-family: 'Raleway', sans-serif;
 }
 
 .nav__list {
@@ -91,6 +156,7 @@ img {
     color: #2e2f42;
     padding: 24px 0;
     display: block;
+    color: var(--text-color);
 }
 
 .nav__item:not(:last-child) {
@@ -102,6 +168,7 @@ img {
 .contact__link:hover,
 .contact__link:focus {
     color: #404bbf;
+    color: var(--secondary-color);
 }
 
 .nav__link.current {
@@ -178,11 +245,7 @@ img {
     letter-spacing: 0.02em;
     color: #FFFFFF;
     font-family: Roboto;
-    font-size: 56px;
-    font-weight: 700;
     line-height: 60px;
-    letter-spacing: 0.02em;
-    text-align: center;
     max-width: 496px;
     margin-left: 472px;
     margin: 0 auto 48px;
@@ -205,11 +268,13 @@ img {
     margin: 0 auto;
     box-shadow: 0px 4px 4px 0px #00000026;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background: var(--main-color);
 }
 
 .hero__button:hover,
 .hero__button:focus {
     background: #404BBF;
+    background: var(--secondary-color);
 }
 
 .benefits {
@@ -665,6 +730,7 @@ img {
 .modal-close-btn:focus {
     background-color: #404bbf;
     border: none;
+    background-color: var(--secondary-color);
 }
 
 .modal-close-icon {
@@ -827,8 +893,10 @@ img {
 }
 
 .container {
-    width: 1158px;
+    width: 90%;
+    max-width: 1158px;
     margin: 0 auto;
+    
 
     padding-left: 15px;
     padding-right: 15px;
