@@ -22,7 +22,7 @@
         <div class="header__container container">
         <nav class="nav">
             <a class="nav__logo" href="./index.html">
-                Web<span>Studio</span>
+                Web<span class="logo__span">Studio</span>
             </a>
             <ul class="nav__list">
                 <li class="nav__item">
@@ -40,6 +40,68 @@
                 <li><a class="contact__link" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
             </ul>
         </address>
+        <button class="burger__btn" type="button" data-menu-open>
+            <svg class="burger__icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-burger"></use>
+            </svg>
+        </button>
+        </div>
+        <div class="mobile__menu" data-menu>
+            <div class="mobile__menu__container container">
+                <button class="mobile__menu__close" data-menu-close>
+                    <svg class="modal__icon__close" width="8" height="8">
+                        <use href="./images/icons.svg#icon-close"></use>
+                    </svg>
+                </button>
+                <nav class="mobile__menu__nav">
+                    <ul class="nav__list__mobile">
+                        <li class="nav__item__mobile"><a class="nav__link__mobile current" href="./index.html">Studio</a></li>
+                        <li class="nav__item__mobile"><a class="nav__link__mobile" href="">Portfolio</a></li>
+                        <li class="nav__item__mobile"><a class="nav__link__mobile" href="">Contacts</a></li>
+                    </ul>
+                </nav>
+                <div class="mobil-box-contact">
+                    <address class="contact__mobile"></address>
+                    <ul class="contact__list__mobile">
+                        <li class="contact__link__mobile"><a class="contacts__mobile" href="tel:+110001111111">+11 (000) 111-11-11</a>
+                        </li>
+                        <li class="contact__link__mobile"><a class="contacts__mobile" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mobil-soc">
+                <ul class="mobil-soc-list">
+                    <li class="mobil-soc-item">
+                        <a class="mobil-link" href="" target="_blank">
+                            <svg class="team__icon__type" width="24" height="24">
+                                <use href="./images/icons.svg#icon-instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="mobil-soc-item">
+                        <a class="mobil-link" href="" target="_blank">
+                            <svg class="team__icon__type" width="24" height="24">
+                                <use href="./images/icons.svg#icon-twitter"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="mobil-soc-item">
+                        <a class="mobil-link" href="" target="_blank">
+                            <svg class="team__icon__type" width="24" height="24">
+                                <use href="./images/icons.svg#icon-facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="mobil-soc-item">
+                        <a class="mobil-link" href="" target="_blank">
+                            <svg class="team__icon__type" width="24" height="24">
+                                <use href="./images/icons.svg#icon-linkedin"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -98,7 +160,7 @@
             </div>
         </section>
         <section class="team">
-            <div class="container">
+            <div class="container team__container">
             <h2 class="team__title">Our Team</h2>
             <ul class="team__list">
                 <li class="team__item">
@@ -338,11 +400,11 @@
     <footer class="footer">
         <div class="footer__content container">
             <div class="footer__container">
-            <a class="footer__logo" href="./index.html">Web<span class="footer__logo">Studio</span></a>
+            <a class="footer__logo" href="./index.html">Web<span class="footer__span">Studio</span></a>
             <p class="footer__text">Increase the flow of customers and sales for your business with digital marketing &
             growth solutions.</p>
             </div>
-            <div class="social__media container">
+            <div class="social__media">
             <p class="social__media__title">Social media</p>
             <ul class="social__media__list">
                 <li class="social">
@@ -436,7 +498,11 @@
                             <svg class="checkbox-icon" width="10" height="8">
                                 <use href="./images/icons.svg#icon-check"></use>
                             </svg>
-                        </span> I accept the terms and conditions of the <a href="#" class="policy-link">Privacy Policy</a>.
+                        </span> 
+                        <span class="span-privacy">
+                            I accept the terms and conditions of the 
+                            <a href="#" class="policy-link">Privacy Policy</a>.
+                        </span> 
                     </label>
                 </div>
                     <button class="send-button" type="button">Send</button>
@@ -445,6 +511,7 @@
     </div>
 
     <script src="./index.js"></script>
+    <script src="./menu.js"></script>
 </body>
 
 </html>
